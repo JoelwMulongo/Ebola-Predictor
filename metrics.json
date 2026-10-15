@@ -1,0 +1,147 @@
+{
+  "model": "logistic_regression",
+  "cv": {
+    "logistic_regression": {
+      "roc_auc": 0.9861,
+      "pr_auc": 0.8502,
+      "recall": 0.9443,
+      "precision": 0.4148,
+      "pr_auc_std": 0.0085
+    },
+    "random_forest": {
+      "roc_auc": 0.9831,
+      "pr_auc": 0.8108,
+      "recall": 0.7941,
+      "precision": 0.6654,
+      "pr_auc_std": 0.0179
+    },
+    "hist_gradient_boosting": {
+      "roc_auc": 0.9846,
+      "pr_auc": 0.8393,
+      "recall": 0.9288,
+      "precision": 0.4201,
+      "pr_auc_std": 0.0113
+    }
+  },
+  "baseline_pr_auc": 0.0404,
+  "test": {
+    "threshold": 0.0402,
+    "roc_auc": 0.9837,
+    "pr_auc": 0.8587,
+    "brier": 0.0129,
+    "confusion": {
+      "tn": 7222,
+      "fp": 455,
+      "fn": 16,
+      "tp": 307
+    },
+    "recall": 0.9505,
+    "recall_95ci": [
+      0.9211,
+      0.9693
+    ],
+    "specificity": 0.9407,
+    "specificity_95ci": [
+      0.9352,
+      0.9458
+    ],
+    "precision": 0.4029,
+    "npv": 0.9978,
+    "prevalence": 0.0404
+  },
+  "calibration": [
+    {
+      "n": 1000,
+      "predicted": 0.0001,
+      "observed": 0.0
+    },
+    {
+      "n": 1000,
+      "predicted": 0.0001,
+      "observed": 0.0
+    },
+    {
+      "n": 1000,
+      "predicted": 0.0003,
+      "observed": 0.0
+    },
+    {
+      "n": 1000,
+      "predicted": 0.0005,
+      "observed": 0.001
+    },
+    {
+      "n": 1000,
+      "predicted": 0.0011,
+      "observed": 0.002
+    },
+    {
+      "n": 1000,
+      "predicted": 0.0026,
+      "observed": 0.003
+    },
+    {
+      "n": 1000,
+      "predicted": 0.0094,
+      "observed": 0.006
+    },
+    {
+      "n": 1000,
+      "predicted": 0.3,
+      "observed": 0.311
+    }
+  ],
+  "top_features": [
+    {
+      "feature": "contact_with_case",
+      "importance": 0.1495
+    },
+    {
+      "feature": "diarrhea",
+      "importance": 0.0724
+    },
+    {
+      "feature": "funeral_attendance",
+      "importance": 0.058
+    },
+    {
+      "feature": "vomiting",
+      "importance": 0.0502
+    },
+    {
+      "feature": "travel_outbreak_area",
+      "importance": 0.0406
+    },
+    {
+      "feature": "fatigue",
+      "importance": 0.029
+    },
+    {
+      "feature": "unexplained_bleeding",
+      "importance": 0.029
+    },
+    {
+      "feature": "bushmeat_exposure",
+      "importance": 0.0236
+    },
+    {
+      "feature": "abdominal_pain",
+      "importance": 0.0188
+    },
+    {
+      "feature": "county",
+      "importance": 0.0097
+    },
+    {
+      "feature": "healthcare_worker",
+      "importance": 0.0072
+    },
+    {
+      "feature": "red_eyes",
+      "importance": 0.0038
+    }
+  ],
+  "target_recall": 0.95,
+  "n_train": 32000,
+  "n_test": 8000
+}
